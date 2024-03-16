@@ -3,5 +3,5 @@ yfinance
 prophet
 datetime
 plotly
-sklearn
+scikit-learn
 numpy
