@@ -2,7 +2,7 @@ import streamlit as st
 import yfinance as yf
 from prophet import Prophet
 from datetime import date, timedelta
-# from prophet.plot_plotly import plot_plotly
+# from prophet.plot_plotly import plot_plotly,plot_components_plotly
 from plotly import graph_objs as go
 from prophet.plot import plot_plotly
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
