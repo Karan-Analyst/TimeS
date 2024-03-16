@@ -2,7 +2,7 @@ import streamlit as st
 import yfinance as yf
 from prophet import Prophet
 from datetime import date, timedelta
-# from prophet.plot_plotly import plot_plotly,plot_components_plotly
+# from prophet.plot_plotly import plot_plotly,plot_components
 from plotly import graph_objs as go
 from prophet.plot import plot_plotly
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
@@ -110,8 +110,8 @@ fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 st.write('Forecast Components')
-fig2 = plot_components_plotly(forecast, 'yearly')
-fig3 = plot_components_plotly(forecast, 'trend')
+fig2 = plot_components(forecast, 'yearly')
+fig3 = plot_components(forecast, 'trend')
 st.plotly_chart(fig2)
 st.plotly_chart(fig2)
 
