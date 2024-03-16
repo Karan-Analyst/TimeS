@@ -111,6 +111,13 @@ st.plotly_chart(fig1)
 
 st.write('Forecast Components')
 fig2 = m.plot_components(forecast)
+
+# Remove the weekly component
+for ax in fig2.axes:
+    if 'weekly' in ax.get_title().lower():
+        ax.remove()
+
+# Show the modified plot
 st.write(fig2)
 
 
