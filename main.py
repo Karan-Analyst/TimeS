@@ -110,14 +110,9 @@ fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 st.write('Forecast Components')
-fig2 = plot_components(forecast, 'yearly')
-fig3 = plot_components(forecast, 'trend')
-st.plotly_chart(fig2)
-st.plotly_chart(fig2)
+fig2 = m.plot_components(forecast['yearly'])
 
-# Show the modified plot
-#st.write(fig2)
-#st.write(fig3)
+st.write(fig2)
 
 
 
