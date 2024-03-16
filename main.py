@@ -114,7 +114,7 @@ fig2 = m.plot_components(forecast)
 
 # Remove the weekly component
 for ax in fig2.axes:
-    if 'weekly' in ax.get_title().lower():
+    if 'Day of week' or 'weekly' in ax.get_title().lower():
         ax.remove()
 
 # Show the modified plot
