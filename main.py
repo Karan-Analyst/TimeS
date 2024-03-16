@@ -112,10 +112,20 @@ st.plotly_chart(fig1)
 st.write('Forecast Components')
 fig2 = m.plot_components(forecast)
 
-# Remove the weekly component
-for ax in fig2.axes:
-    if 'Day of week' in ax.get_title().lower():
-        ax.remove()
+for ax in fig2.get_axes():
+    if 'weekly' in ax.get_title().lower():
+        # Get the labels and values from the weekly component plot
+        labels = ax.get_xticklabels()
+        values = ax.get_xticks()
+        
+        # Filter out Saturdays and Sundays
+        weekdays = pd.to_datetime(values).weekday
+        filtered_labels = [label.get_text() for i, label in enumerate(labels) if weekdays[i] not in [5, 6]]
+        filtered_values = [value for value, weekday in zip(values, weekdays) if weekday not in [5, 6]]
+        
+        # Set the filtered labels and values
+        ax.set_xticks(filtered_values)
+        ax.set_xticklabels(filtered_labels)
 
 # Show the modified plot
 st.write(fig2)
