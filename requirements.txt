@@ -1,0 +1,7 @@
+streamlit
+yfinance
+prophet
+datetime
+plotly
+sklearn.metrics
+numpy
