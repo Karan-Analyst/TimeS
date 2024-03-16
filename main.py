@@ -7,7 +7,6 @@ from plotly import graph_objs as go
 from prophet.plot import plot_plotly
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
 import numpy as np
-
 st.title("Stock Performance")
 stocks = (
     'UPL',
