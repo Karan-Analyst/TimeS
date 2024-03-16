@@ -110,8 +110,8 @@ fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 st.write('Forecast Components')
-fig2 = plot_plotly(m,forecast['yearly'])
-fig3 = plot_plotly(m,forecast['trend'])
+fig2 = plot_plotly(forecast['yearly'])
+fig3 = plot_plotly(forecast['trend'])
 st.plotly_chart(fig2)
 st.plotly_chart(fig2)
 
