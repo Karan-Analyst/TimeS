@@ -110,15 +110,12 @@ fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 st.write('Forecast Components')
-fig2 = m.plot_components(forecast)
-
-# Remove all components except for yearly
-for ax in fig2.get_axes():
-    if 'yearly' not in ax.get_title().lower():
-        ax.remove()
+fig2 = forecast['yearly']
+fig3 = forecast['trend']
 
 # Show the modified plot
 st.write(fig2)
+st.write(fig3)
 
 
 
