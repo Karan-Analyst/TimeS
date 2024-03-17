@@ -125,11 +125,11 @@ st.write('Forecast data')
 fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
-st.write('Forecast Components')
-st.write(forecast['weekly'])
-fig2 = m.plot_components(forecast)
+#st.write('Forecast Components')
+#st.write(forecast['weekly'])
+#fig2 = m.plot_components(forecast)
 
-st.write(fig2)
+#st.write(fig2)
 
 # a = yf.Ticker(selected_stocks).info['beta']
 # st.write(a)
